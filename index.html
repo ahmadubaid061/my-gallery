@@ -67,9 +67,37 @@
          img{
            width: 400px;
             height: 200px;
+            cursor: pointer;
          }
         h2{
             margin-left: 10px;}
+        .image-overlay {
+           display: none; 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: unset;
+            align-items: unset;
+        }
+        .image-overlay .image-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .image-overlay img {
+         width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: none; 
+            max-height: none;
+        }
          @media(max-width:768px)
          {
             section{
@@ -100,128 +128,154 @@
             h2{
                 margin: 0%;
             }
+            .image-overlay img {
+                max-width: 95%;
+                max-height: 95%;
+            }
          }
 
     </style>
 </head>
-<body>
-    <header>
-        <div class="head">
-            <h3>PC Wallpapers</h3>
-            <p><input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button></p>
+    <body>
+        <header>
+            <div class="head">
+                <h3>PC Wallpapers</h3>
+                <p><input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button></p>
+            </div>
+            
+        </header>
+        <div class="main">
+            <h2>Nature </h2>
+            <section class="nature" id="nature">
+                <img src="field.jpg" data-name="field" alt="">
+                <img src="beach.jpg" data-name="beach" alt="">
+                <img src="beach1.jpg" data-name="beach1" alt="">
+                <img src="clouds.jpg" data-name="clouds" alt="">
+                <img src="green.jpg" data-name="green" alt="">
+                <img src="lake.jpg" data-name="lake" alt="">
+                <img src="mountain.jpg" data-name="mountain" alt="">
+                <img src="plants.jpg" data-name="plants" alt="">
+                <img src="red.jpg" data-name="red" alt="">
+                <img src="river.jpg" data-name="river" alt="">
+                <img src="sunset.jpg" data-name="sunset" alt="">
+                <img src="peeks.jpg" data-name="peeks" alt="">
+            </section>
+            <h2>Birds </h2>
+            <section class="birds" id="birds">
+                <img src="balbala.jpg" data-name="balbala" alt="">
+                <img src="bird.jpg" data-name="bird" alt="">
+                <img src="butterfly.jpg" data-name="butterfly" alt="">
+                <img src="eagle.jpg" data-name="eagle" alt="">
+                <img src="falcon.jpg" data-name="falcon" alt="">
+                <img src="fisher.png" data-name="fisher" alt="">
+                <img src="goose.jpg" data-name="goose" alt="">
+                <img src="owl.jpg" data-name="owl" alt="">
+                <img src="sparrow.jpg" data-name="sparrow" alt="">
+            </section>
+            <h2>Animals </h2>
+            <section class="animals" id="animals">
+                <img src="cats.jpg" data-name="cats" alt="">
+                <img src="dog.jpg" data-name="dog" alt="">
+                <img src="frog.jpg" data-name="frog" alt="">
+                <img src="horse.jpg" data-name="horse" alt="">
+                <img src="puppy.jpg" data-name="puppy" alt="">
+                <img src="monkey.jpg" data-name="monkey" alt="">
+                <img src="lion.jpg" data-name="lion" alt="">
+                <img src="tiger.jpg" data-name="tiger" alt="">
+                <img src="crocodile.jpg" data-name="crocodile" alt="">
+
+            </section>
+            <h2>PC's</h2>
+            <section class="pc's" id="pc's">
+                <img src="glow.jpg" data-name="glow" alt="">
+                <img src="hacker.jpg" data-name="hacker" alt="">
+                <img src="hp.jpg" data-name="hp" alt="">
+                <img src="coding.jpg" data-name="coding" alt="">
+                <img src="hpp.jpg" data-name="hpp" alt="">
+                <img src="laptop.jpg" data-name="laptop" alt="">
+                <img src="small.jpg" data-name="small" alt="">
+                <img src="study.jpg" data-name="study" alt="">
+                <img src="tablepc.jpg" data-name="tablepc" alt="">
+
+            </section>
+            <h2>CARS</h2>
+            <section class="cars" id="cars">
+                <img src="antique.jpg" data-name="antique" alt="">
+                <img src="buick.jpg" data-name="buick" alt="">
+                <img src="chevy.webp" data-name="chevy" alt="">
+                <img src="ferrari.jpg" data-name="ferrari" alt="">
+                <img src="ford.jpg" data-name="ford" alt="">
+                <img src="lotus.jpg" data-name="lotus" alt="">
+                <img src="oldcar.jpg" data-name="oldcar" alt="">
+                <img src="race.jpg" data-name="race" alt="">
+                <img src="porche.webp" data-name="porche" alt="">
+
+            </section>
+            
+
+        
+
+            <div class="image-overlay" id="imageOverlay">
+                    <div class="image-wrapper">
+                        <img src="" alt="Full-screen image">
+                    </div>
+            </div>
         </div>
-        
-    </header>
-    <div class="main">
-        <h2>Nature </h2>
-        <section class="nature" id="nature">
-            <img src="field.jpg" data-name="field" alt="">
-            <img src="beach.jpg" data-name="beach" alt="">
-            <img src="beach1.jpg" data-name="beach1" alt="">
-            <img src="clouds.jpg" data-name="clouds" alt="">
-            <img src="green.jpg" data-name="green" alt="">
-            <img src="lake.jpg" data-name="lake" alt="">
-            <img src="mountain.jpg" data-name="mountain" alt="">
-            <img src="plants.jpg" data-name="plants" alt="">
-            <img src="red.jpg" data-name="red" alt="">
-            <img src="river.jpg" data-name="river" alt="">
-            <img src="sunset.jpg" data-name="sunset" alt="">
-            <img src="peeks.jpg" data-name="peeks" alt="">
-        </section>
-         <h2>Birds </h2>
-         <section class="birds" id="birds">
-            <img src="balbala.jpg" data-name="balbala" alt="">
-            <img src="bird.jpg" data-name="bird" alt="">
-            <img src="butterfly.jpg" data-name="butterfly" alt="">
-            <img src="eagle.jpg" data-name="eagle" alt="">
-            <img src="falcon.jpg" data-name="falcon" alt="">
-            <img src="fisher.png" data-name="fisher" alt="">
-            <img src="goose.jpg" data-name="goose" alt="">
-            <img src="owl.jpg" data-name="owl" alt="">
-            <img src="sparrow.jpg" data-name="sparrow" alt="">
-        </section>
-        <h2>Animals </h2>
-        <section class="animals" id="animals">
-            <img src="cats.jpg" data-name="cats" alt="">
-            <img src="dog.jpg" data-name="dog" alt="">
-            <img src="frog.jpg" data-name="frog" alt="">
-            <img src="horse.jpg" data-name="horse" alt="">
-            <img src="puppy.jpg" data-name="puppy" alt="">
-            <img src="monkey.jpg" data-name="monkey" alt="">
-            <img src="lion.jpg" data-name="lion" alt="">
-            <img src="tiger.jpg" data-name="tiger" alt="">
-            <img src="crocodile.jpg" data-name="crocodile" alt="">
+        <script>
+            document.querySelector('button').addEventListener('click', function()
+            {
+                const searchTerm = document.querySelector('input[name="search"]').value.toLowerCase();
+                const sections = document.querySelectorAll('section');
 
-        </section>
-        <h2>PC's</h2>
-        <section class="pc's" id="pc's">
-            <img src="glow.jpg" data-name="glow" alt="">
-            <img src="hacker.jpg" data-name="hacker" alt="">
-            <img src="hp.jpg" data-name="hp" alt="">
-            <img src="coding.jpg" data-name="coding" alt="">
-            <img src="hpp.jpg" data-name="hpp" alt="">
-            <img src="laptop.jpg" data-name="laptop" alt="">
-            <img src="small.jpg" data-name="small" alt="">
-            <img src="study.jpg" data-name="study" alt="">
-            <img src="tablepc.jpg" data-name="tablepc" alt="">
-
-        </section>
-        <h2>CARS</h2>
-        <section class="cars" id="cars">
-            <img src="antique.jpg" data-name="antique" alt="">
-            <img src="buick.jpg" data-name="buick" alt="">
-            <img src="chevy.webp" data-name="chevy" alt="">
-            <img src="ferrari.jpg" data-name="ferrari" alt="">
-            <img src="ford.jpg" data-name="ford" alt="">
-            <img src="lotus.jpg" data-name="lotus" alt="">
-            <img src="oldcar.jpg" data-name="oldcar" alt="">
-            <img src="race.jpg" data-name="race" alt="">
-            <img src="porche.webp" data-name="porche" alt="">
-
-        </section>
-        
-
-       
-
-    </div>
-    <script>
-            document.querySelector('button').addEventListener('click', function() {
-            const searchTerm = document.querySelector('input[name="search"]').value.toLowerCase();
-            const sections = document.querySelectorAll('section');
-
-            sections.forEach(section => {
-                const sectionName = section.className.toLowerCase();
-                const heading = section.previousElementSibling; // Get the h2 heading above the section
-                
-                if (searchTerm === '' || sectionName.includes(searchTerm)) {
-                    section.style.display = 'grid'; // Show entire section
-                    heading.style.display = 'block'; // Show heading
-                } else {
-                    section.style.display = 'none'; // Hide section
-                    heading.style.display = 'none'; // Hide heading
-                }
-            });
-        });
-
-        //for live suggestions
-            const searchInput = document.querySelector('input[name="search"]');
-            const suggestions = ["Nature", "Birds", "Animals", "PCs", "Cars"];
-
-            searchInput.addEventListener("input", function() {
-                const searchTerm = this.value.toLowerCase();
-                const filteredSuggestions = suggestions.filter(s => s.toLowerCase().includes(searchTerm));
-                
-                let datalist = document.getElementById("categories");
-                datalist.innerHTML = ""; // Clear previous suggestions
-                
-                filteredSuggestions.forEach(suggestion => {
-                    let option = document.createElement("option");
-                    option.value = suggestion;
-                    datalist.appendChild(option);
+                sections.forEach(section => 
+                {
+                    const sectionName = section.className.toLowerCase();
+                    const heading = section.previousElementSibling; 
+                    
+                    if (searchTerm === '' || sectionName.includes(searchTerm)) 
+                    {
+                        section.style.display = 'grid'; 
+                        heading.style.display = 'block';
+                    } 
+                    else 
+                    {
+                        section.style.display = 'none'; 
+                        heading.style.display = 'none'; 
+                    }
                 });
             });
-    </script>
+
+                
+                    const searchInput = document.querySelector('input[name="search"]');
+                    const suggestions = ["Nature", "Birds", "Animals", "PCs", "Cars"];
+
+                    searchInput.addEventListener("input", function() {
+                        const searchTerm = this.value.toLowerCase();
+                        const filteredSuggestions = suggestions.filter(s => s.toLowerCase().includes(searchTerm));
+                        
+                        let datalist = document.getElementById("categories");
+                        datalist.innerHTML = ""; 
+                        
+                        filteredSuggestions.forEach(suggestion => {
+                            let option = document.createElement("option");
+                            option.value = suggestion;
+                            datalist.appendChild(option);
+                        });
+                    });
+                        const images = document.querySelectorAll('section img');
+                        const overlay = document.getElementById('imageOverlay');
+                        const overlayImg = overlay.querySelector('img');
+                        images.forEach(img => {
+                            img.addEventListener('click', () => {
+                                overlayImg.src = img.src;
+                                overlay.style.display = 'flex';
+                            });
+                        });
+                        overlay.addEventListener('click', () => {
+                            overlay.style.display = 'none';
+                        });
+        </script>
     
-</body>
+    </body>
 </html>
